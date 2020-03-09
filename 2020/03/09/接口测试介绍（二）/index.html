@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/daixs2019/daixs2019.github.io">
-  <title>戴先森的博客</title>
+  <title>接口测试介绍（二） | 戴先森的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="戴先森的博客">
-<meta property="og:url" content="https://github.com/daixs2019/daixs2019.github.io/index.html">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="接口测试介绍（二）">
+<meta property="og:url" content="https://github.com/daixs2019/daixs2019.github.io/2020/03/09/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E4%BB%8B%E7%BB%8D%EF%BC%88%E4%BA%8C%EF%BC%89/index.html">
 <meta property="og:site_name" content="戴先森的博客">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://github.com/img/5.png">
+<meta property="article:published_time" content="2020-03-09T14:36:12.000Z">
+<meta property="article:modified_time" content="2020-03-09T14:38:09.517Z">
 <meta property="article:author" content="戴先森">
+<meta property="article:tag" content="-随笔">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/img/5.png">
   
     <link rel="alternative" href="/atom.xml" title="戴先森的博客" type="application/atom+xml">
   
@@ -134,9 +139,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-接口测试介绍（二）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-接口测试介绍（二）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -150,19 +153,79 @@
     <div class="article-entry" itemprop="articleBody">
       <center><p>
   
-    <h1 itemprop="name">
-      <a class="article-title_code_ant" href="/daixs2019.github.io/2020/03/09/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E4%BB%8B%E7%BB%8D%EF%BC%88%E4%BA%8C%EF%BC%89/">接口测试介绍（二）</a>
+    <h1 class="article-title_code_ant" itemprop="name">
+      接口测试介绍（二）
     </h1>
   
 </p></center>
       
       
         <p><img src="/img/5.png" alt=""></p>
-        
-          <a class="article-more-a" href="/daixs2019.github.io/2020/03/09/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E4%BB%8B%E7%BB%8D%EF%BC%88%E4%BA%8C%EF%BC%89/#more">more >></a>
-        
+<a id="more"></a>
+<p>1、接口测试质量评估标准</p>
+<p>a) 业务功能覆盖是否完整</p>
+<p>b) 业务规则覆盖是否完整</p>
+<p>c) 参数验证是否达到要求（边界、业务规则）</p>
+<p>d) 接口异常场景覆盖是否完整</p>
+<p>e) 接口覆盖率是否达到要求</p>
+<p>f)  代码覆盖率是否达到要求</p>
+<p>g) 性能指标是否满足要求</p>
+<p>h) 安全指标是否满足要求</p>
+<p>2.接口测试都要掌握哪些知识？</p>
+<p>①了解系统及内部各个组件之间的业务逻辑交互；</p>
+<p>②了解接口的I/O（input/output：输入输出）；</p>
+<p>③了解协议的基本内容，包括：通信原理、三次握手、常用的协议类型、报文构成、数据传输方式、常见的状态码、URL构成等；</p>
+<p>④常用的接口测试工具，比如：jmeter、loadrunner、postman、soapUI等；</p>
+<p>⑤数据库基础操作命令（检查数据入库、提取测试数据等）；</p>
+<p>⑥常见的字符类型，比如：char、varchar、text、int、float、datatime、string等；</p>
+<p>如何获取接口相关信息？</p>
+<p>一般的企业，都会由开发或者对应的技术负责人员编写接口文档，里面会注明接口相关的地址、参数类型、方法、输入、输出等信息，如果没有，想办法获取。。。</p>
+<p>接口文档八要素：</p>
+<p>封面：封面最好是本公司规定的封面，有logo，内容标题，版本号，公司名称，文档产生日期；</p>
+<p>修订历史：表格形式较好些，包括：版本、修订说明、修订日期、修订人、审核时间审核人等；</p>
+<p>接口信息：接口调用方式，常用的GET/POST方式，接口地址；</p>
+<p>功能描述：简洁清晰的描述接口功能，比如：接口获取的信息不包括哪些；</p>
+<p>接口参数说明：每个参数都要和实际中调用的一样，包括大小写；参数的含义言简意赅的说明，格式，是string 还是int 还是long等格式；</p>
+<p>说明部分，说明参数值是需要哪里提供，并详细说明参数怎么生成的，例如时间戳，是哪个时间段的，参数是否必填，一些参数是必须要有的，有些是可选参数等；</p>
+<p>返回值说明：</p>
+<p>①最好有一个模板返回值，并说明每个返回参数的意义；</p>
+<p>②提供一个真实的调用接口，真实的返回值；</p>
+<p>调用限制，安全方面：</p>
+<p>加密方式，或者自己公司一个特殊的加密过程，只要双方采用一致的加密算法就可以调用接口，保证了接口调用的安全性，比如常见的md5；</p>
+<p>文档维护：文档在维护的时候，如有修改一定要写上修改日期，修改人，对大的修改要有版本号变更；</p>
+<p>九.其他相关知识？</p>
+<p>get请求，post请求的区别：</p>
+<p>1、GET使用URL或Cookie传参。而POST将数据放在BODY中。<br>2、GET的URL会有长度上的限制，则POST的数据则可以非常大。<br>3、POST比GET安全，因为数据在地址栏上不可见。<br>4、一般get请求用来获取数据，post请求用来发送数据。<br>其实上面这几点，只有最后一点说的是比较靠谱的，第一点post请求也可以把数据放到url里面，get请求其实也没长度限制，post请求看起来参数是隐式的，稍微安全那么一些些，但是那只是对于小白用户来说的，就算post请求，你通过抓包也是可以抓到参数的。（唯一区别就是这一点，上面3点区别都是不准确的）</p>
+<p>http状态码：</p>
+<p>1、200 2开头的都表示这个请求发送成功，最常见的就是200，就代表这个请求是ok的，服务器也返回了。<br>2、300 3开头的代表重定向，最常见的是302，把这个请求重定向到别的地方了。<br>3、400 400代表客户端发送的请求有语法错误，401代表访问的页面没有授权，403表示没有权限访问这个页面，404代表没有这个页面。<br>4、500 5开头的代表服务器有异常，500代表服务器内部异常，504代表服务器端超时，没返回结果。</p>
+<p>webservice接口怎么测试：</p>
+<p>它不需要你在拼报文了，会给一个webservice的地址，或者wsdl文件，直接在soapui导入，就可以看到这个webservice里面的所有接口，也有报文，直接填入参数调用，看返回结果就可以了。</p>
+<p>cookie与session的区别：</p>
+<p>1、cookie数据存放在客户的浏览器上，session数据放在服务器上。<br>2、cookie不是很安全，别人可以分析存放在本地的cookie并进行cookie欺骗考虑到安全应当使用session。<br>3、session会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能考虑到减轻服务器性能方面，应当使用cookie。<br>4、单个cookie保存的数据不能超过4K，很多浏览器都限制一个站点最多保存20个cookie。<br>5、所以个人建议：<br>将登陆信息等重要信息存放为session<br>其他信息如果需要保留，可以放在cookie中</p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -182,16 +245,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/daixs2019.github.io/2020/03/09/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E4%BB%8B%E7%BB%8D%EF%BC%88%E4%BA%8C%EF%BC%89/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/daixs2019/daixs2019.github.io/2020/03/09/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E4%BB%8B%E7%BB%8D%EF%BC%88%E4%BA%8C%EF%BC%89/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/daixs2019.github.io/2020/03/09/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E4%BB%8B%E7%BB%8D%EF%BC%88%E4%B8%80%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">接口测试介绍（一）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -211,393 +333,14 @@
 
 
 
+  
+  
+  
 
   
-    <article id="post-接口测试介绍（一）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-        <a href="/daixs2019.github.io/2020/03/09/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E4%BB%8B%E7%BB%8D%EF%BC%88%E4%B8%80%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-03-09T14:10:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      <center><p>
-  
-    <h1 itemprop="name">
-      <a class="article-title_code_ant" href="/daixs2019.github.io/2020/03/09/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E4%BB%8B%E7%BB%8D%EF%BC%88%E4%B8%80%EF%BC%89/">接口测试介绍（一）</a>
-    </h1>
-  
-</p></center>
-      
-      
-        <p><img src="/img/4.png" alt=""></p>
-        
-          <a class="article-more-a" href="/daixs2019.github.io/2020/03/09/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E4%BB%8B%E7%BB%8D%EF%BC%88%E4%B8%80%EF%BC%89/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/daixs2019.github.io/2020/03/09/%E6%8E%A5%E5%8F%A3%E6%B5%8B%E8%AF%95%E4%BB%8B%E7%BB%8D%EF%BC%88%E4%B8%80%EF%BC%89/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
 
   
-    <article id="post-常用的linux命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-        <a href="/daixs2019.github.io/2020/03/08/%E5%B8%B8%E7%94%A8%E7%9A%84linux%E5%91%BD%E4%BB%A4/" class="archive-article-date">
-  	<time datetime="2020-03-08T13:08:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      <center><p>
-  
-    <h1 itemprop="name">
-      <a class="article-title_code_ant" href="/daixs2019.github.io/2020/03/08/%E5%B8%B8%E7%94%A8%E7%9A%84linux%E5%91%BD%E4%BB%A4/">常用的linux命令</a>
-    </h1>
-  
-</p></center>
-      
-      
-        <p><img src="/img/1.png" alt=""></p>
-        
-          <a class="article-more-a" href="/daixs2019.github.io/2020/03/08/%E5%B8%B8%E7%94%A8%E7%9A%84linux%E5%91%BD%E4%BB%A4/#more">more >></a>
-        
-      
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/daixs2019.github.io/2020/03/08/%E5%B8%B8%E7%94%A8%E7%9A%84linux%E5%91%BD%E4%BB%A4/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-软件测试面试题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-        <a href="/daixs2019.github.io/2020/03/05/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E9%9D%A2%E8%AF%95%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2020-03-05T08:01:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      <center><p>
-  
-    <h1 itemprop="name">
-      <a class="article-title_code_ant" href="/daixs2019.github.io/2020/03/05/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E9%9D%A2%E8%AF%95%E9%A2%98/">软件测试面试题</a>
-    </h1>
-  
-</p></center>
-      
-      
-        <p><img src="/img/psb.jpg" alt=""></p>
-        
-          <a class="article-more-a" href="/daixs2019.github.io/2020/03/05/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E9%9D%A2%E8%AF%95%E9%A2%98/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/daixs2019.github.io/2020/03/05/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E9%9D%A2%E8%AF%95%E9%A2%98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-软件测试总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-        <a href="/daixs2019.github.io/2020/03/04/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%80%BB%E7%BB%93/" class="archive-article-date">
-  	<time datetime="2020-03-04T14:07:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      <center><p>
-  
-    <h1 itemprop="name">
-      <a class="article-title_code_ant" href="/daixs2019.github.io/2020/03/04/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%80%BB%E7%BB%93/">软件测试总结</a>
-    </h1>
-  
-</p></center>
-      
-      
-        <p>1.测试与软件模型</p>
-<p>软件开发生命周期模型指的是软件开发全过程、活动和任务的结构性框架。软件项目的开发包括：需求、设计、编码、测试、稳定、部署、维护等阶段。</p>
-<p>常见的软件开发模型有瀑布模型、迭代开发、螺旋开发和敏捷开发。</p>
-        
-          <a class="article-more-a" href="/daixs2019.github.io/2020/03/04/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%80%BB%E7%BB%93/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/daixs2019.github.io/2020/03/04/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%80%BB%E7%BB%93/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JDK13没有JRE问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-        <a href="/daixs2019.github.io/2020/01/07/JDK13%E6%B2%A1%E6%9C%89JRE%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2020-01-07T12:37:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      <center><p>
-  
-    <h1 itemprop="name">
-      <a class="article-title_code_ant" href="/daixs2019.github.io/2020/01/07/JDK13%E6%B2%A1%E6%9C%89JRE%E9%97%AE%E9%A2%98/">关于JDK13没有JRE问题</a>
-    </h1>
-  
-</p></center>
-      
-      
-        <p>之前下载的JDK都包含JRE，这次我下载了JDK13的版本发现没有jre，<br>后来发现jdk10以后都不会生成jre，需要在cmd命令提示符，进入java安装路径<br>输入命令<br><code>bin\jlink.exe --module-path jmods --add-modules java.desktop --output jre</code>手动生成jre<br>如图所示<br><img src="/img/tu1.png" alt=""></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/daixs2019.github.io/2020/01/07/JDK13%E6%B2%A1%E6%9C%89JRE%E9%97%AE%E9%A2%98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -620,8 +363,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
